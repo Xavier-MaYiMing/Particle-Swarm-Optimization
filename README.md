@@ -26,6 +26,7 @@
 #### Test problem: Pressure vessel design
 
 ![](https://github.com/Xavier-MaYiMing/Particle-Swarm-Optimization/blob/main/Pressure%20vessel%20design.png)
+
 $$
 \begin{align*}
 \text{min}\ f(x)=0.6224x_1x_3x_4+1.7781x_2x_3^2+3.1661x_1^2x_4+19.84x_1^2x_3,\\
