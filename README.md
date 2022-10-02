@@ -25,8 +25,9 @@
 
 #### Test problem: Pressure vessel design
 
-![](C:\Users\dell\Desktop\研究生\个人算法主页\Grey Wolf Optimizer\Pressure vessel design.png)
+![](https://github.com/Xavier-MaYiMing/Particle-Swarm-Optimization/blob/main/Pressure%20vessel%20design.png)
 $$
+\begin{align*}
 \text{min}\ f(x)=0.6224x_1x_3x_4+1.7781x_2x_3^2+3.1661x_1^2x_4+19.84x_1^2x_3,\\
 \text{s.t.} -x_1+0.0193x_3\leq0,\\
 -x_3+0.0095x_3\leq0,\\
@@ -36,6 +37,7 @@ x_4-240\leq0,\\
 0\leq x_2 \leq99,\\
 10\leq x_3 \leq 200,\\
 10\leq x_4 \leq 200.
+\end{align*}
 $$
 
 
@@ -52,7 +54,7 @@ if __name__ == '__main__':
 
 ##### Output:
 
-![convergence curve](C:\Users\dell\Desktop\研究生\个人算法主页\Particle Swarm Optimization\convergence curve.png)
+![](https://github.com/Xavier-MaYiMing/Particle-Swarm-Optimization/blob/main/convergence%20curve.png)
 
 ```python
 {
