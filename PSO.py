@@ -7,7 +7,6 @@
 # @Statement : Particle Swarm Optimization
 # @Reference : Kennedy J, Eberhart R. Particle swarm optimization[C]//Proceedings of ICNN'95-International Conference on Neural Networks. IEEE, 1995, 4: 1942-1948.
 import random
-import copy
 import math
 import matplotlib.pyplot as plt
 
@@ -77,9 +76,9 @@ def main(pop, iter, vmin, vmax):
         velocity.append([random.uniform(vmin[j], vmax[j]) for j in range(dim)])
         fitness.append(obj(temp_position))
     g_best = min(fitness)  # global best
-    p_best = copy.deepcopy(fitness)
+    p_best = fitness.copy()
     g_best_location = position[fitness.index(g_best)]  # the particle location of global best
-    p_best_location = copy.deepcopy(position)  # the particle location of personal best
+    p_best_location = position.copy()  # the particle location of personal best
     iter_best = [g_best]
 
     # Step 3. The main loop
@@ -94,10 +93,10 @@ def main(pop, iter, vmin, vmax):
             new_fitness = obj(position[i])
             if new_fitness < p_best[i]:
                 p_best[i] = new_fitness
-                p_best_location[i] = position[i]
+                p_best_location[i] = position[i].copy()
                 if new_fitness < g_best:
                     g_best = new_fitness
-                    g_best_location = position[i]
+                    g_best_location = position[i].copy()
         iter_best.append(g_best)
 
     # Step 4. Sort the results
